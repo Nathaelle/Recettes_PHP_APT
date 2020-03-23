@@ -1,6 +1,6 @@
 <nav class="menu">
     <ul>
-        <li><a href ="#">Page d'accueil</a></li>
+        <li><a href ="index.php?page=home">Page d'accueil</a></li>
         <li><a href ="index.php?page=entree">Les entrées</a>
             <ul class="sous-menu">
                 <li><a href ="recettes/entrees/entree1.html">Entrée 1</a></li>
