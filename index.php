@@ -1,6 +1,8 @@
 <?php
     //var_dump($_GET);
 
+
+    // ROUTER 
     $page = isset($_GET["page"])? $_GET["page"] : "home";
 
     switch ($page) {
@@ -21,6 +23,7 @@
             break;
         default : $include = "recettes/home.html";
     }
+    // ---
 ?>
 
 <!DOCTYPE html>
