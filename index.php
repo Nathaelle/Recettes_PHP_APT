@@ -16,6 +16,9 @@
         case "dessert":
             $include = "recettes/dessert.html";
             break;
+        case "recette":
+            $include = "html/recette.php";
+            break;
         default : $include = "recettes/home.html";
     }
 ?>
