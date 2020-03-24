@@ -1,13 +1,14 @@
 <?php
 
 require "recettes.php";
-var_dump($recette_test);
+//var_dump($recette_test);
+$recette = $recette_test;
 
 ?>
 
-<h1 class="recipe-head">Entree 1</h1>
+<h1 class="recipe-head"><?= $recette["titre"] ?></h1>
         
-<div class="illustration img-block"><a href="entree1.html"><img src="../../img/entree1.jpg" alt="Image entrée 1">
+<div class="illustration img-block"><a href="entree1.html"><img src="img/<?= $recette["image"] ?>" alt="Illustration de la recette <?= $recette["titre"] ?>">
 </a></div>
 
 <section class="row bg-light">
@@ -20,31 +21,33 @@ var_dump($recette_test);
                 <th>Coût</th>
             </tr>
             <tr>
-                <td>15sec</td>
-                <td>8</td>
-                <td>1/4</td>
-                <td>1/4</td>
+                <td><?= $recette["temps"] ?></td>
+                <td><?= $recette["personnes"] ?></td>
+                <td><?= $recette["difficulte"] ?>/4</td>
+                <td><?= $recette["cout"] ?>/4</td>
             </tr>
         </table>
 
         <h2>Ingrédients</h2>
-        <ul>
+        <?= $recette["ingredients"] ?>
+        <!-- <ul>
             <li>1 paquet de pâtes de lasagnes</li>
             <li>3 oignons jaunes </li>
             <li>3 gousses d'ail</li>
             <li>1 branche de céleri</li>
             <li>1 carotte</li>
             <li>etc ...</li>
-        </ul>
+        </ul> -->
     </div>
 
     <div class="col-6">
         <h2>Etapes</h2>
-        <ol>
+        <?= $recette["etapes"] ?>
+        <!-- <ol>
             <li>Faire revenir gousses hachées d'ail et les oignons émincés dans un peu d'huile d'olive.</li>
             <li> Ajouter la carotte et la branche de céleri hachée puis la viande et faire revenir le tout.</li>
             <li>Au bout de quelques minutes, ajouter le vin rouge. Laisser cuire jusqu'à évaporation.</li>
-        </ol>
+        </ol> -->
     </div>
 </section>
 <hr>
