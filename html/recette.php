@@ -1,3 +1,10 @@
+<?php
+
+require "recettes.php";
+var_dump($recette_test);
+
+?>
+
 <h1 class="recipe-head">Entree 1</h1>
         
 <div class="illustration img-block"><a href="entree1.html"><img src="../../img/entree1.jpg" alt="Image entrée 1">
