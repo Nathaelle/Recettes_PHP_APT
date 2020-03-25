@@ -10,7 +10,7 @@
             $include = "recettes/home.html";
             break;
         case "entree":
-            $include = "recettes/entree.html";
+            $include = "recettes/entree.php";
             break;
         case "plat":
             $include = "recettes/plat.html";

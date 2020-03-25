@@ -2,7 +2,7 @@
 
 require "recettes.php";
 //var_dump($recette_test);
-$recette = $recette_test;
+$recette = $recette1;
 
 ?>
 
@@ -53,30 +53,46 @@ $recette = $recette_test;
 <hr>
 <section>
     <h2>Commentaires</h2>
-    <form action="../../index.html" method="post">
+    <form action="formulaire.php" method="post">
         <p>
             <label for="nom">Votre nom</label>
             <input type="text" id="nom" name="nom" placeholder="Votre nom">
         </p>
+        <p>
+            <label for="email">Votre email</label>
+            <input type="text" id="email" name="email" placeholder="Votre email">
+        </p>
+        <p>
+            <label for="level">Vous êtes</label>
+            <select id="level" name="level">
+                <option>Professionnel</option>
+                <option>Particulier</option>
+            </select>
+        </p>
         <p>Note /5 : 
             <label for="rad0">0</label>
-            <input type="radio" id="rad0" name="nom" value="0">
+            <input type="radio" id="rad0" name="note" value="0" selected>
             <label for="rad1">1</label>
-            <input type="radio" id="rad1" name="nom" value="1">
+            <input type="radio" id="rad1" name="note" value="1">
             <label for="rad2">2</label>
-            <input type="radio" id="rad2" name="nom" value="2">
+            <input type="radio" id="rad2" name="note" value="2">
             <label for="rad3">3</label>
-            <input type="radio" id="rad3" name="nom" value="3">
+            <input type="radio" id="rad3" name="note" value="3">
             <label for="rad4">4</label>
-            <input type="radio" id="rad4" name="nom" value="4">
+            <input type="radio" id="rad4" name="note" value="4">
             <label for="rad5">5</label>
-            <input type="radio" id="rad5" name="nom" value="5">
+            <input type="radio" id="rad5" name="note" value="5">
         </p>
         <p> 
             <label for="comment">Laissez-nous un commentaire</label><br>
-            <textarea id="comment" rows="5" cols="40"></textarea>
+            <textarea id="comment" rows="5" cols="40" name="comment"></textarea>
         </p>
-        <p><input type="submit" value="Envoyer">
+        <p>
+            <input type="checkbox" id="chk" name="chk">
+            <label for="chk"> J'ai lu et j'accepte votre politique de gestion des données personnelles</label>
+        </p>
+        <p>
+            <input type="submit" value="Envoyer">
         </p>
     </form>
 </section>
